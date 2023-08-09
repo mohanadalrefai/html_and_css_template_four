@@ -140,6 +140,8 @@ ul {
 }
 
 .head .search input {
+    border: 1px solid #ccc;
+    border-radius: 10px;
     margin-left: 5px;
     padding-left: 30px;
     width: 160px;
@@ -564,6 +566,179 @@ ul {
 
 /* end projects table */
 
+
+/* start setting */
+.settings-page {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+
+@media (max-width:767px) {
+    .settings-page {
+        grid-template-columns: minmax(100px, 1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 10px;
+    }
+}
+
+.settings-page .close-message {
+    resize: none;
+    font-family: inherit;
+}
+
+.settings-page .email {
+    display: inline-flex;
+    width: calc(100% - 80px);
+}
+
+.settings-page .sec-box:not(:last-of-type) {
+    border-bottom: 1px solid #eee;
+}
+
+.settings-page .social-boxes i {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    background-color: #f6f6f6;
+    transition: 0.3s;
+}
+
+.settings-page .social-boxes input {
+    height: 40px;
+    border: 1px solid #ddd;
+    background-color: #f6f6f6;
+    padding-left: 10px;
+    border-radius: 0 6px 6px 0;
+}
+
+.settings-page .social-boxes>div:focus-within i {
+    color: black
+}
+
+.settings-page .widgets-control label {
+    padding-left: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.settings-page .widgets-control label::before,
+.settings-page .widgets-control label::after {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -9px;
+    border-radius: 4px;
+}
+
+.settings-page .widgets-control label::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--grey-color);
+}
+
+.settings-page .widgets-control label::after {
+    width: 18px;
+    height: 18px;
+    font: var(--fa-font-solid);
+    content: "\f00c";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    background-color: var(--blue-color);
+    color: white;
+    transform: scale(0) rotate(360deg);
+    transition: 0.3s;
+}
+
+.settings-page .widgets-control input[type=checkbox]:checked+label::after {
+    transform: scale(1);
+}
+
+.settings-page .widgets-control input[type=checkbox] {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    display: none;
+}
+
+.settings-page .date label {
+    padding-left: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.settings-page .date label::before,
+.settings-page .date label::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+
+.settings-page .date label::before {
+    width: 18px;
+    height: 18px;
+    left: 0;
+    top: 50%;
+    margin-top: -11px;
+    border: 2px solid var(--grey-color);
+}
+
+.settings-page .date input[type=radio]:checked+label::before {
+    border-color: var(--blue-color)
+}
+
+.settings-page .date label::after {
+    width: 12px;
+    height: 12px;
+    left: 5px;
+    top: 5px;
+    transform: scale(0);
+    transition: 0.3s;
+}
+
+.settings-page .date input[type=radio]:checked+label::after {
+    background-color: var(--blue-color);
+    transform: scale(1);
+}
+
+.settings-page .date input {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.settings-page .servers {
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+}
+
+@media (max-width:767px) {
+    .settings-page .servers {
+        grid-template-columns: minmax(100px, 1fr);
+    }
+}
+
+.settings-page .servers input {
+    display: none;
+}
+
+.settings-page .server label {
+    cursor: pointer;
+}
+
+.settings-page .server:hover {
+    border: 2px solid var(--blue-color);
+}
+
+.settings-page .server input:checked+label,
+.settings-page .server input:checked+i {
+    color: var(--blue-color);
+}
+
 label .toggle-checkbox {
     appearance: none;
     -moz-appearance: none;
@@ -602,9 +777,131 @@ label .toggle-checkbox:checked+.toggle-swich::before {
     left: 45px;
 }
 
-/* start setting */
+.settings-page :disabled {
+    cursor: no-drop;
+    background-color: #f0f4f8;
+    color: #bbb;
+}
+
 /* end setting */
 
+/* start profile */
+
+.profile-page .overview .avatar-box {
+    width: 350px;
+}
+
+@media (max-width:767px) {
+    .profile-page .overview {
+        flex-direction: column;
+    }
+}
+
+.profile-page .overview .avatar-box>img {
+    width: 120px;
+    height: 120px;
+}
+
+.profile-page .overview .level {
+    height: 6px;
+    width: 70%;
+}
+
+.profile-page .overview .level>span {
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.profile-page .overview .info-box .box {
+    transition: 0.3s;
+}
+
+.profile-page .overview .info-box .box:not(:last-of-type) {
+    border-bottom: 1px solid #eee;
+}
+
+.profile-page .overview .info-box .box:hover {
+    background-color: #f9f9f9;
+}
+
+@media (min-width:350px) {
+    .profile-page .overview .info-box .box>div {
+    min-width: 250px;}
+}
+
+.profile-page .info-box .toggle-swich {
+    width: 100px;
+    height: 22px;
+}
+
+.profile-page .info-box .toggle-swich::before {
+    font-size: 14px;
+}
+
+.profile-page .info-box .toggle-checkbox:checked+.toggle-swich::before {
+    content: "\f058";
+    left: 78px;
+}
+
+@media (max-width:767px) {
+    .profile-page .info-box .toggle-swich {
+        margin: auto;
+    }
+}
+
+@media (max-width:768px) {
+    .profile-page .other-data {
+        flex-direction: column;
+    }
+
+    .profile-page .other-data>div {
+        margin-bottom: 0;
+    }
+
+    .profile-page .other-data>div:not(:first-child) {
+        margin-top: 0;
+    }
+}
+
+.profile-page .other-data .skills-card ul li {
+    padding: 15px 0;
+}
+
+.profile-page .other-data .skills-card ul li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.profile-page .other-data .skills-card span {
+    padding: 4px 10px;
+    margin-right: 5px;
+    background-color: #eee;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.profile-page .other-data .activity img {
+    width: 64px;
+    height: 64px;
+    margin-right: 10px;
+}
+
+@media (min-width:768px) {
+    .profile-page .other-data .activity .date {
+        text-align: right;
+    }    
+}
+
+@media (max-width:767px) {
+    .profile-page .other-data .activity img {
+        margin: 0 0 15px 0;
+    }
+    .profile-page .other-data .activity .date {
+        margin: 15px 0 0;
+    }
+}
+
+/* end profile */
 
 /* start animation */
 @keyframes change-color {
