@@ -827,7 +827,8 @@ label .toggle-checkbox:checked+.toggle-swich::before {
 
 @media (min-width:350px) {
     .profile-page .overview .info-box .box>div {
-    min-width: 250px;}
+        min-width: 250px;
+    }
 }
 
 .profile-page .info-box .toggle-swich {
@@ -889,19 +890,98 @@ label .toggle-checkbox:checked+.toggle-swich::before {
 @media (min-width:768px) {
     .profile-page .other-data .activity .date {
         text-align: right;
-    }    
+    }
 }
 
 @media (max-width:767px) {
     .profile-page .other-data .activity img {
         margin: 0 0 15px 0;
     }
+
     .profile-page .other-data .activity .date {
         margin: 15px 0 0;
     }
 }
 
 /* end profile */
+/* start projects */
+.projects-page {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+
+@media (max-width:767px) {
+    .projects-page {
+        grid-template-columns: minmax(200px, 1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 10px;
+    }
+}
+
+.projects-page .project .date {
+    right: 10px;
+    top: 10px;
+}
+
+.projects-page .project .team {
+    min-height: 80px;
+}
+
+.projects-page .project .team a {
+    bottom: 0px;
+    left: 0px;
+}
+
+.projects-page .project .team img {
+    border: 2px solid white;
+}
+
+.projects-page .project .team a:nth-child(2) {
+    left: 25px;
+}
+
+.projects-page .project .team a:nth-child(3) {
+    left: 50px;
+}
+
+.projects-page .project .team a:nth-child(4) {
+    left: 75px;
+}
+
+.projects-page .project .team a:nth-child(5) {
+    left: 100px;
+}
+
+.projects-page .project .team a:nth-child(6) {
+    left: 125px;
+}
+
+.projects-page .project .team a:hover {
+    z-index: 100;
+}
+
+@media (max-width: 767px) {
+    .projects-page .project .do span {
+        margin-bottom: 15px;
+    }
+}
+
+.projects-page .project .info .prog {
+    width: 260px;
+    height: 8px;
+}
+
+@media (max-width:767px) {
+    .projects-page .project .info .prog {
+        margin-bottom: 15px;
+    }
+}
+
+.projects-page .project .info .prog span {
+    height: inherit;
+}
+
+/* end projects */
 
 /* start animation */
 @keyframes change-color {
