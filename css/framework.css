@@ -438,6 +438,26 @@
     border-bottom: 1px solid #eee;
 }
 
+.b-2-white {
+    border: 2px solid white;
+}
+
+.bt-2-white {
+    border-top: 2px solid white;
+}
+
+.br-2-white {
+    border-right: 2px solid white;
+}
+
+.bb-2-white {
+    border-bottom: 2px solid white;
+}
+
+.bl-2-white {
+    border-left: 2px solid white;
+}
+
 .rad-6 {
     border-radius: 6px;
 }
