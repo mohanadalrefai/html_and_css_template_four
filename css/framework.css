@@ -416,7 +416,7 @@
 }
 
 /* end font */
-/* start border */
+/* start border & outline */
 .b-none {
     border: none;
 }
@@ -458,6 +458,26 @@
     border-left: 2px solid white;
 }
 
+.b-3-white {
+    border: 3px solid white;
+}
+
+.bt-3-white {
+    border-top: 3px solid white;
+}
+
+.br-3-white {
+    border-right: 3px solid white;
+}
+
+.bb-3-white {
+    border-bottom: 3px solid white;
+}
+
+.bl-3-white {
+    border-left: 3px solid white;
+}
+
 .rad-6 {
     border-radius: 6px;
 }
@@ -470,7 +490,11 @@
     border-radius: 50%;
 }
 
-/* end border */
+.ol-3-trans {
+    outline: 3px solid transparent;
+}
+
+/* end border & outline */
 /* start width & height */
 .w-full {
     width: 100%;
